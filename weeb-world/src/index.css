@@ -1,0 +1,13 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@font-face {
+    font-family: "Manga";
+    src: url(../src/assets/mangat.ttf) format("truetype");
+}
+
+body{
+    font-family:"Oswald" ;
+}
