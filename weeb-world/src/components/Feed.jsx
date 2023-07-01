@@ -14,20 +14,20 @@ function Feed() {
   const { stateUsers } = useUsers();
   const [content, setContent] = useState({
     text: '',
-    imageURL: '', // Update the key name to imageURL
+    imageURL: '', 
   });
   const [fileName, setFileName] = useState('');
 
   const handlePost = () => {
     AddPostsService(content, dispatchPost);
-    setContent({ text: '', imageURL: '' }); // Clear both text and imageURL
+    setContent({ text: '', imageURL: '' });
     setFileName('');
   };
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     const fileURL = URL.createObjectURL(file);
-    setContent({ ...content, imageURL: fileURL }); // Update the key name to imageURL
+    setContent({ ...content, imageURL: fileURL }); 
     setFileName(file.name);
   };
 
@@ -46,7 +46,7 @@ function Feed() {
   };
 
   return (
-    <div className="w-7/12 mx-auto">
+    <div className="w-12/12 md:7/12 flex flex-col h-[100vh] overflow-auto">
       <div>
         <div className="flex flex-col items-center mx-auto mb-2 z-100 bg-[rgba(0,0,0,0.8)] w-10/12 md:w-12/12 rounded-b-xl">
           <h1 className="text-3xl self-start ml-8 my-4 font-bold font-[manga] text-[#FFF01F]">

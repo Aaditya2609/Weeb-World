@@ -14,7 +14,7 @@ function Home() {
 
   };
   return (
-    <div className='flex' style={divStyle}>
+    <div className='flex flex-col-reverse md:flex-row' style={divStyle}>
       
         <Nav />
         <Feed/>

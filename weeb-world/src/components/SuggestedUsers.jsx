@@ -6,7 +6,7 @@ function SuggestedUsers() {
     const { stateUsers } = useUsers()
     const { stateAuth } = useAuth()
     return (
-        <div className='w-3/12 fixed right-0 px-2 bg-[rgba(0,0,0,0.8)] text-white rounded-b-xl hidden md:block'>
+        <div className='w-3/12 max-h-full px-2 bg-[rgba(0,0,0,0.8)] text-white rounded-b-xl hidden md:block'>
             <h1 className='text-3xl self-start my-4 font-bold font-[manga] text-[#FFF01F]'>Suggested Users</h1>
             <div className='mb-4'>
                 {stateUsers.users?.map(item => {
