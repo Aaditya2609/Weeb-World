@@ -3,6 +3,7 @@ import { useUsers } from '../contexts/UserContext';
 import { useAuth } from '../contexts/AuthContext';
 import { FollowUserService } from '../services/Users/Follow';
 import { filterAuthorizedUsers } from '../utilities/filterSuggestedUsers';
+import { NavLink } from 'react-router-dom';
 
 function SuggestedUsers() {
   const { stateUsers, dispatchUsers } = useUsers();
@@ -29,6 +30,7 @@ function SuggestedUsers() {
       <div className='mb-4'>
         {filteredUsers.map((item) => (
           <div className='my-2' key={item._id}>
+            <NavLink to={`/profile/${item.username}`}>
             <div className='flex grow-0 items-center'>
               <img className='w-10 h-10 rounded-full mr-2' src={item.avatar} alt='pfp' />
               <div className='font-medium text-left w-6/12'>
@@ -42,7 +44,9 @@ function SuggestedUsers() {
                 + Follow
               </button>
             </div>
+            </NavLink>
           </div>
+          
         ))}
       </div>
     </div>

@@ -33,7 +33,7 @@ function Profile() {
                 setIsAuthUser(true)
             }
         }
-    }, [stateUsers.users, stateAuth.userDetails]);
+    }, [stateUsers.users, stateAuth.userDetails,userName]);
 
     const handleEditUser = () => {
         setShowEditUser(true);
@@ -71,8 +71,8 @@ function Profile() {
             RemoveBookmarkService(dispatchUsers, item._id) : BookmarkPostService(dispatchUsers, item._id)
     }
     return (
-        <div className="w-12/12 md:w-10/12 h-fit mx-auto mt-4 p-4  rounded-xl">
-            <div className="w-12/12 h-fit mx-auto mt-4 p-4 bg-[rgba(0,0,0,0.8)] rounded-xl">
+        <div className="w-12/12 md:w-10/12 max-h-[100vh] mx-auto mt-1 p-4 pt-1 rounded-xl overflow-auto">
+            <div className="w-12/12 md:w-10/12 h-fit mx-auto mt-4 p-4 bg-[rgba(0,0,0,0.8)] rounded-xl">
                 <div className="flex flex-col items-center py-10 bg-[rgba(255,255,255,0.8)]  rounded-xl">
                     <img className="w-28 h-28 mb-3 rounded-full shadow-lg" src={user.avatar} alt="Bonnie image" />
                     <h5 className="mb-1 text-2xl font-medium ">{user.firstName} {user.lastName}</h5>
@@ -85,24 +85,25 @@ function Profile() {
                             <button className="inline-flex items-center px-4 py-2 text-sm font-bold text-center text-black  bg-[#FFF01F] rounded-lg">Edit Profile/Follow/Unfollow</button>}
                     </div>
 
-                    <div className='flex gap-4 my-4 font-bold'>
+                    <div className='flex gap-4 my-4 font-bold '>
                         <div>
                             <p>Posts</p>
                             <p>{statePost.userPost?.length}</p>
                         </div>
-                        <div><p>Followers</p>
+                        <div >
+                            <p>Followers</p>
                             <p>{user.followers?.length}</p>
                         </div>
-                        <div><p>Following</p>
+                                <div ><p>Following</p>
                             <p>{user.following?.length}</p>
                         </div>
                     </div>
 
                 </div>
 
-            </div>
-            <div className='w-12/12 md:w-12/12 flex flex-col h-[100vh] overflow-auto'>
-                <div className="flex flex-col items-center mx-auto mb-2 z-100 bg-[rgba(0,0,0,0.8)] w-12/12 md:w-12/12 rounded-b-xl">
+                </div>
+                <div className="w-12/12 md:w-10/12 items-center mx-auto flex flex-col h-fit bg-[rgba(0,0,0,0.8)]  rounded-xl  my-2 overflow-auto">
+                <div className="flex flex-col items-center  justify-center mx-auto mb-2 p-2 z-100 bg-transparent w-12/12 rounded-xl">
                     <div>
                         {statePost.userPost.map((item) => {
                             const tempUser = stateUsers?.users?.find(
@@ -111,7 +112,7 @@ function Profile() {
 
                             return (
                                 <div
-                                    className="bg-[rgba(0,0,0,0.8)] mb-1 w-8/12 p-2 m-auto text-black rounded-xl"
+                                    className="bg-[rgba(0,0,0,0.8)] mb-1 w-12/12 m-auto my-4 text-black rounded-xl"
                                     key={item._id}
                                 >
                                     <div className="flex flex-col bg-[rgba(255,255,255,0.8)] rounded-xl">

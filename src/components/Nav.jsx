@@ -17,7 +17,7 @@ function Nav() {
 
   return (
     <div className="w-[100vw] md:w-[25%]">
-      <div className="flex flex-row md:flex-col h-20 md:h-full items-center  bg-[rgba(0,0,0,0.8)] text-white">
+      <div className="flex flex-row md:flex-col h-20 md:h-full items-center  bg-[rgba(0,0,0,0.8)] text-white md:p-0 px-4">
         <div className="px-4 py-8 mb-4 items-center text-3xl font-[manga] text-[#FFF01F] hidden md:block">
           Weeb-World
         </div>
@@ -61,7 +61,7 @@ function Nav() {
         <div className="flex  items-center justify-center text-2xl md:mb-8 rounded-lg">
           <NavLink to={`/profile/${stateAuth.userDetails[0]?.username ?? ''}`} className="flex items-center justify-center space-x-4 px-3">
             <img className="w-10 h-10 rounded-full" src={stateAuth.userDetails[0]?.avatar} alt="pfp" />
-            <div className="font-medium text-left w-fit">
+            <div className="font-medium text-left w-fit hidden md:block">
               <div>
                 {stateAuth.userDetails[0]?.firstName} {stateAuth.userDetails[0]?.lastName}
               </div>
