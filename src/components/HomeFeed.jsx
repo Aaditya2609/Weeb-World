@@ -143,7 +143,7 @@ function HomeFeed() {
               Post
             </button>
           </div>
-        </div>/
+        </div>
       </div>
       <div className='flex flex-row items-center justify-between mx-auto gap-2 bg-[rgba(0,0,0,0.8)] w-10/12 md:w-8/12 my-2 rounded-xl px-4 py-1'>
         <h1 className='font-bold text-xl text-white w-fit'>Filter Posts: </h1>
@@ -231,12 +231,7 @@ function HomeFeed() {
             </div>
           );
         })}
-        <button
-          title="Contact Sale"
-          className="fixed z-90 bottom-10 right-1/4 bg-black w-14 h-14 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-[#16444e]"
-        >
-          +
-        </button>
+      
         {showEditModal && <EditModal setShowEditModal={setShowEditModal} editPost={editPost} />}
       </div>
     </div>

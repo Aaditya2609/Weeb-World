@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import signup from "../assets/signup.jpg"
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { toast } from 'react-toastify';
 import { signupService } from '../services/Auth/AuthSignup';
@@ -196,12 +196,15 @@ function Signup() {
                         />
                         <p className='text-[#dc143c] text-left text-xl font-bold'>{passwordError}</p>
                     </div>
-                    <div className="mt-6">
+                    <div className="mt-6 mb-4">
                         <button className="w-2/3 px-4 py-2 my-2 text-2xl bg-black hover:bg-[#FFF01F] hover:text-black text-[#FFF01F] font-bold rounded-lg" onClick={handleSignup}>
                             Submit
                         </button>
+                       
                     </div>
+                    <NavLink className="text-[#FFF01F] font-bold text-2xl bg-black p-2 rounded-xl"to="/login"> Already a user?</NavLink>
                 </div>
+                
             </div>
         </div>
     )

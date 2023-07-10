@@ -200,12 +200,6 @@ function Profile() {
                                 </div>
                             );
                         })}
-                        <button
-                            title="Contact Sale"
-                            className="fixed z-90 bottom-10 right-1/4 bg-black w-14 h-14 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-[#16444e]"
-                        >
-                            +
-                        </button>
                         {showEditModal && <EditModal setShowEditModal={setShowEditModal} editPost={editPost} />}
                     </div>
                 </div> : <div className='text-[#FFF01F] text-4xl p-4 w-8/12'>No posts yet </div>}

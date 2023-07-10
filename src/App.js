@@ -11,9 +11,7 @@ import RequiresAuth from './components/RequiresAuth';
 import ProfilePage from './pages/ProfilePage';
 import Bookmarks from './pages/Bookmarks';
 import Explore from './pages/Explore';
-import { useUsers } from './contexts/UserContext';
-import { useAuth } from './contexts/AuthContext';
-import { useEffect } from 'react';
+import Users from './pages/Users';
 
 function App() {
   return (
@@ -22,7 +20,8 @@ function App() {
         <Route path="/Home" element={<Home />}/>
         <Route path="/Bookmarks" element={<Bookmarks />}/>
         <Route path="/Explore" element={<Explore />}/>
-        <Route path="/Profile/:userName" element={<ProfilePage />}/>
+        <Route path="/Profile/:userName" element={<ProfilePage />}/> 
+        <Route path="/users" element={<Users />}/> 
         <Route element={<RequiresAuth />}>
         <Route path="/" element={<Landing />}/>
         <Route path="/Login" element={<LoginPage />}/>

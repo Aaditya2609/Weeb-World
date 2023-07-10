@@ -28,6 +28,7 @@ function SuggestedUsers() {
     <div className='w-3/12 max-h-full px-2 bg-[rgba(0,0,0,0.8)] text-white rounded-b-xl hidden lg:block'>
       <h1 className='text-3xl self-start my-4 font-bold font-[manga] text-[#FFF01F]'>Suggested Users</h1>
       <div className='mb-4'>
+        {filteredUsers.length?<div>
         {filteredUsers.map((item) => (
           <div className='my-2' key={item._id}>
             <div className='flex items-center gap-4 '>
@@ -48,7 +49,7 @@ function SuggestedUsers() {
            
           </div>
           
-        ))}
+        ))}</div>:<div className='text-2xl font-semibold font-[manga]'>Following All Users</div>}
       </div>
     </div>
   );

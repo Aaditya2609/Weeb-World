@@ -59,7 +59,7 @@ function Feed() {
 
   return (
     <div className="w-12/12 md:w-10/12 flex flex-col h-[100vh] overflow-auto">
-      <div className='bg-[rgba(0,0,0,0.8)] w-8/12 m-auto  rounded-bl-xl rounded-br-xl '>
+      <div className='bg-[rgba(0,0,0,0.8)] w-10/12 md:w-8/12 m-auto  rounded-bl-xl rounded-br-xl '>
         <h1 className="text-3xl self-start my-4 font-bold font-[manga] text-[#FFF01F]">
           EXPLORE
         </h1>
@@ -91,7 +91,7 @@ function Feed() {
 
           return (
             <div
-              className="bg-[rgba(0,0,0,0.8)] my-4 w-8/12 p-2  m-auto text-black rounded-xl"
+              className="bg-[rgba(0,0,0,0.8)] my-4 w-10/12 md:8/12 p-2  m-auto text-black rounded-xl"
               key={item._id}
             >
               <div className="flex flex-col bg-[rgba(255,255,255,0.8)] rounded-xl">
@@ -151,12 +151,7 @@ function Feed() {
             </div>
           );
         })}
-        <button
-          title="Contact Sale"
-          className="fixed z-90 bottom-10 right-1/4 bg-black w-14 h-14 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-[#16444e]"
-        >
-          +
-        </button>
+       
         {showEditModal && <EditModal setShowEditModal={setShowEditModal} editPost={editPost} />}
       </div>
     </div>
