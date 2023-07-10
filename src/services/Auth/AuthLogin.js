@@ -13,7 +13,6 @@ export const loginService=async(username,password,dispatchAuth)=>{
           });
           if(res.status===200)
           {
-            console.log(res.data.foundUser)
             localStorage.setItem("Token",res.data.encodedToken)
             const userDetails=JSON.stringify(res.data.foundUser)
             localStorage.setItem("userDetail",userDetails)

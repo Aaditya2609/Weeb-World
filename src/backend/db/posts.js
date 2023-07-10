@@ -11,8 +11,8 @@ export const posts = [
     _id: uuid(),
     content:
     {
-      text: "The future belongs to those who believe in the beauty of their dreams",
-      imageURL: "https://pbs.twimg.com/media/EmObJcVVgAc7ZVI?format=jpg&name=medium"
+      text: "I don't like expending more effort than i have to",
+      imageURL: "https://i0.wp.com/quotetheanime.com/wp-content/uploads/2020/08/Classroom-Of-The-Elite-Quotes.-Ayanokouji-Kiyotaka-You-may-come-to-regret-trying-to-manipulate-me-1024x1024.jpg"
     },
     likes: {
       likeCount: 0,
@@ -20,7 +20,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "test",
-    createdAt: formatDate(),
+    createdAt: "2023-06-24T12:00:00Z",
     updatedAt: formatDate(),
   },
   {
@@ -31,12 +31,12 @@ export const posts = [
       imageURL: "https://scontent.fhyd14-2.fna.fbcdn.net/v/t31.18172-8/17814580_1371329772913637_7635302899111049904_o.jpg?_nc_cat=108&cb=99be929b-59f725be&ccb=1-7&_nc_sid=9267fe&_nc_ohc=WNOnDPL5xKUAX-egGY_&_nc_ht=scontent.fhyd14-2.fna&oh=00_AfCnzAfXImI_sLodlmQvsmoypp-ddvoZJ3Hj6hOTawQdnA&oe=64BCB90B"
     },
     likes: {
-      likeCount: 0,
+      likeCount: 4,
       likedBy: [],
       dislikedBy: [],
     },
     username: "test",
-    createdAt: formatDate(),
+    createdAt: "2023-05-25T15:00:00Z",
     updatedAt: formatDate(),
   },
   {
@@ -52,7 +52,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "test",
-    createdAt: formatDate(),
+    createdAt: "2023-05-15T18:00:00Z",
     updatedAt: formatDate(),
   },
   {
@@ -85,7 +85,7 @@ export const posts = [
       dislikedBy: [],
     },
     username: "clankiller",
-    createdAt: formatDate(),
+    createdAt: "2023-06-28T9:00:00Z",
     updatedAt: formatDate(),
   },
   {
@@ -97,12 +97,12 @@ export const posts = [
     }
     ,
     likes: {
-      likeCount: 0,
+      likeCount: 3,
       likedBy: [],
       dislikedBy: [],
     },
     username: "clankiller",
-    createdAt: formatDate(),
+    createdAt: "2023-07-13T12:00:00Z",
     updatedAt: formatDate(),
   },
   {
@@ -114,12 +114,12 @@ export const posts = [
     }
     ,
     likes: {
-      likeCount: 0,
+      likeCount: 9999,
       likedBy: [],
       dislikedBy: [],
     },
     username: "clankiller",
-    createdAt: formatDate(),
+    createdAt: "2039-07-13T12:00:00Z",
     updatedAt: formatDate(),
   },
   {
@@ -131,12 +131,12 @@ export const posts = [
     }
     ,
     likes: {
-      likeCount: 0,
+      likeCount: 3,
       likedBy: [],
       dislikedBy: [],
     },
     username: "kakarot",
-    createdAt: formatDate(),
+    createdAt: "2022-07-13T11:00:00Z",
     updatedAt: formatDate(),
   },
   {
@@ -148,12 +148,12 @@ export const posts = [
     }
     ,
     likes: {
-      likeCount: 0,
+      likeCount: 8,
       likedBy: [],
       dislikedBy: [],
     },
     username: "pirateking",
-    createdAt: formatDate(),
+    createdAt: "2023-01-23T14:00:00Z",
     updatedAt: formatDate(),
   },
   {
@@ -165,12 +165,12 @@ export const posts = [
     }
     ,
     likes: {
-      likeCount: 0,
+      likeCount: 10,
       likedBy: [],
       dislikedBy: [],
     },
     username: "capedbaldy",
-    createdAt: formatDate(),
+    createdAt: "2022-12-11T12:00:00Z",
     updatedAt: formatDate(),
   },
   {

@@ -24,6 +24,11 @@ function EditUserModal({ user, setShowEditUser }) {
         const fileURL = URL.createObjectURL(file);
         setTempUser({ ...tempUser, avatar: fileURL });
     };
+    const handleCoverChange = (e) => {
+        const file = e.target.files[0];
+        const fileURL = URL.createObjectURL(file);
+        setTempUser({ ...tempUser, cover: fileURL });
+    };
 
     const handleBioChange = (value) => {
         const temp = { ...tempUser, bio: value }
@@ -40,7 +45,7 @@ function EditUserModal({ user, setShowEditUser }) {
     }
     return (
         <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-70">
-            <div className="bg-white w-fit p-4 rounded-xl ">
+            <div className="bg-white w-fit md:w-[35%] p-4 rounded-xl ">
                 <div className="flex justify-between items-center">
                     <h1 className="p-4 text-3xl">Edit User</h1>
                     <button
@@ -68,6 +73,17 @@ function EditUserModal({ user, setShowEditUser }) {
                                 id="imageInput"
                                 className='hidden'
                                 onChange={handleImageChange}
+                            />
+                        </label>
+                        <label
+                            className="m-1 flex items-center bg-[#FFF01F] hover:bg-[rgba(0,0,0,1)] hover:text-[#FFF01F] text-lg text-[rgba(0,0,0,1)]  my-1 py-1 px-2 border rounded whitespace-nowrap"
+                        >
+                            Change Cover Image
+                            <input
+                                type="file"
+                                id="imageInput"
+                                className='hidden'
+                                onChange={handleCoverChange}
                             />
                         </label>
                     </div>

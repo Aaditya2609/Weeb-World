@@ -9,7 +9,6 @@ export const getUserPostsService=async(username,dispatchPost)=>{
         
           if(res.status===200)
           {
-            console.log(res)
             dispatchPost({
               type: "GET_USER_POST",
               payload: res.data.posts,

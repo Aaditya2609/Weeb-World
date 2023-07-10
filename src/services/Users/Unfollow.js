@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const FollowUserService=async(dispatchUser,user,followUser,dispatchAuth)=>{
+export const unfollowUserService=async(dispatchUser,user,followUser,dispatchAuth)=>{
     const token = localStorage.getItem("Token");
     try{
         const res =await axios({

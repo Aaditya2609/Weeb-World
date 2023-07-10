@@ -23,10 +23,10 @@ function Landing() {
                 </div>
 
                 <div className='flex flex-col items-center justify-center'>
-                    <button class="m-2 bg-black hover:bg-[#FFF01F] hover:text-black text-[#FFF01F] font-bold py-2 px-6 text-xl border rounded">
+                    <button className="m-2 bg-black hover:bg-[#FFF01F] hover:text-black text-[#FFF01F] font-bold py-2 px-6 text-xl border rounded">
                         <NavLink to="/Login">Login</NavLink>
                     </button>
-                    <button class="m-2 bg-black hover:bg-[#FFF01F] hover:text-black text-[#FFF01F] font-bold py-2 px-6 text-xl border rounded">
+                    <button className="m-2 bg-black hover:bg-[#FFF01F] hover:text-black text-[#FFF01F] font-bold py-2 px-6 text-xl border rounded">
                     <NavLink to="/Signup">Join Now</NavLink>
                     </button>
                 </div>

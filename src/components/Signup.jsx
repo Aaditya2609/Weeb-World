@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { toast } from 'react-toastify';
 import { signupService } from '../services/Auth/AuthSignup';
+import { useUsers } from '../contexts/UserContext';
 
 function Signup() {
     const divStyle = {
@@ -12,7 +13,7 @@ function Signup() {
         backgroundPosition: 'center',
 
     };
-
+    const {dispatchUsers}=useUsers();
     const [userDetail, setUserDetail] = useState({});
     const [showPassword, setShowPassword] = useState(false);
     const [verifyPassword, setverifyPassword] = useState("");
@@ -60,7 +61,8 @@ function Signup() {
                 userName,
                 email,
                 password,
-                dispatchAuth
+                dispatchAuth,
+                dispatchUsers
             )
             navigate("/Home")
         }
@@ -171,7 +173,6 @@ function Signup() {
                     </div>
                     <div className="mb-2">
                         <label
-                            for="password"
                             className="block text-2xl text-left font-semibold text-white"
                         >
                             Password
@@ -184,7 +185,7 @@ function Signup() {
                     </div>
                     <div className="mb-2">
                         <label
-                            for="confirmpassword"
+                            
                             className="block text-2xl text-left font-semibold text-white"
                         >
                             Confirm Password

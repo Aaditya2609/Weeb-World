@@ -17,7 +17,7 @@ function ProfilePage() {
       return (
         <div className='flex flex-col-reverse md:flex-row' style={divStyle}>
             <Nav />
-            <Profile/>
+            <Profile className="justify-self-start"/>
             <SuggestedUsers/>
         </div>
       )

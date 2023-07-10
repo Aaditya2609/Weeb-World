@@ -4,7 +4,8 @@ export const signupService=async( firstName,
     lastName,
     userName,
     email,
-    password,dispatchAuth)=>{
+    password,dispatchAuth,dispatchUsers)=>{
+        console.log("dispatch users",dispatchUsers)
     try{
         const res =await axios({
             method: 'POST',
@@ -15,13 +16,18 @@ export const signupService=async( firstName,
                 username:userName,
                 email: email,
                 password: password,
+                avatar:"https://wallpapers-clan.com/wp-content/uploads/2023/01/naruto-gif-pfp-16.gif",
+                cover:"https://c4.wallpaperflare.com/wallpaper/892/692/922/howl-s-moving-castle-studio-ghibli-fantasy-art-clouds-daylight-hd-wallpaper-preview.jpg"
             }
           });
           if(res.status===201)
-          console.log(res.data)
           {
             dispatchAuth({
                 type: "GET_USER_DETAILS",
+                payload: res.data.createdUser,
+              });
+            dispatchUsers({
+                type: "ADD_USERS",
                 payload: res.data.createdUser,
               });
             localStorage.setItem("Token", res.data.encodedToken);

@@ -11,7 +11,6 @@ export const LikePostService = async (dispatchPost,postId) => {
             },
         });
         if (res.status === 201) {
-            console.log(res.data.posts)
             dispatchPost({
                 type: "GET_POST",
                 payload: res.data.posts,

@@ -1,7 +1,7 @@
-import React, {  useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { usePost } from '../contexts/PostContext';
-import { AiOutlineFileImage, AiFillLike, AiFillDislike, AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai';
-import { BsBookmark,BsBookmarksFill } from "react-icons/bs";
+import { AiOutlineFileImage, AiOutlineDelete, AiOutlineEdit, AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+import { BsBookmark, BsBookmarksFill } from "react-icons/bs";
 import { BsEmojiSmile } from 'react-icons/bs';
 import { useUsers } from '../contexts/UserContext';
 import { AddPostsService } from '../services/Posts/AddPost';
@@ -14,13 +14,14 @@ import { toast } from 'react-toastify';
 import { BookmarkPostService } from '../services/Users/Bookmark';
 import { RemoveBookmarkService } from '../services/Users/RemoveBookmark';
 import { filterPostsByFollowing } from '../utilities/filterPosts';
-
+import { NavLink } from 'react-router-dom';
+import { sortPosts } from '../utilities/trendingLatestFilters';
 
 function HomeFeed() {
 
   const { stateAuth } = useAuth();
   const { statePost, dispatchPost } = usePost();
-  const { stateUsers,dispatchUsers } = useUsers();
+  const { stateUsers, dispatchUsers } = useUsers();
   const [content, setContent] = useState({
     text: '',
     imageURL: '',
@@ -28,15 +29,16 @@ function HomeFeed() {
   const [fileName, setFileName] = useState('');
   const [showEditModal, setShowEditModal] = useState(false);
   const [editPost, setEditPost] = useState(null);
-  const [filteredPosts,setFilteredPosts]=useState([]);
+  const [filteredPosts, setFilteredPosts] = useState([]);
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     if (stateUsers.users.length > 0 && stateAuth.userDetails.length > 0) {
-      const authUser = stateAuth.userDetails[0];
-      const unauthorizedUsers = filterPostsByFollowing(statePost.post, authUser);
-      setFilteredPosts(unauthorizedUsers);
+      const unauthorizedUsers = filterPostsByFollowing(statePost.post, stateAuth.userDetails[0]);
+      const finalFilter = sortPosts(unauthorizedUsers, filter)
+      setFilteredPosts(finalFilter);
     }
-  }, [stateUsers.users, stateAuth.userDetails])
+  }, [stateUsers.users, stateAuth.userDetails, statePost.post, filter])
 
   const handlePost = () => {
     if (content.text !== "") {
@@ -44,7 +46,7 @@ function HomeFeed() {
       setContent({ text: '', imageURL: '' });
       setFileName('');
     }
-    else{
+    else {
       toast.warning("Post text cannot be empty", {
         position: "bottom-center",
         autoClose: 1000,
@@ -86,7 +88,7 @@ function HomeFeed() {
     setShowEditModal(true);
   }
 
-  const handleBookmark =(item)=>{
+  const handleBookmark = (item) => {
     return stateUsers.bookmarks.find(items => items._id === item._id) ?
       RemoveBookmarkService(dispatchUsers, item._id) : BookmarkPostService(dispatchUsers, item._id)
 
@@ -95,8 +97,9 @@ function HomeFeed() {
 
   return (
     <div className="w-12/12 md:w-10/12 flex flex-col h-[100vh] overflow-auto">
+    
       <div>
-        <div className="flex flex-col items-center mx-auto mb-2 z-100 bg-[rgba(0,0,0,0.8)] w-10/12 md:w-8/12 rounded-b-xl">
+        <div className="flex flex-col items-center mx-auto z-100 bg-[rgba(0,0,0,0.8)] w-10/12 md:w-8/12 rounded-b-xl">
           <h1 className="text-3xl self-start ml-8 my-4 font-bold font-[manga] text-[#FFF01F]">
             New Post
           </h1>
@@ -140,9 +143,25 @@ function HomeFeed() {
               Post
             </button>
           </div>
+        </div>/
+      </div>
+      <div className='flex flex-row items-center justify-between mx-auto gap-2 bg-[rgba(0,0,0,0.8)] w-10/12 md:w-8/12 my-2 rounded-xl px-4 py-1'>
+        <h1 className='font-bold text-xl text-white w-fit'>Filter Posts: </h1>
+        <div className='flex'>
+        <button onClick={() => setFilter("trending")}
+          className="m-1 bg-[#FFF01F] hover:bg-[rgba(0,0,0,0.8)] hover:text-[#FFF01F]  text-[rgba(0,0,0,0.8)] font-bold my-2 py-1 px-2 text-md border rounded"
+        >
+          Trending
+        </button>
+
+        <button
+          className="m-1 bg-[#FFF01F] hover:bg-[rgba(0,0,0,0.8)] hover:text-[#FFF01F]  text-[rgba(0,0,0,0.8)] font-bold my-2 py-1 px-2 text-md border rounded"
+          onClick={() => setFilter("latest")}
+        >
+          Latest
+        </button>
         </div>
       </div>
-
       <div>
         {filteredPosts.map((item) => {
           const tempUser = stateUsers?.users?.find(
@@ -151,9 +170,10 @@ function HomeFeed() {
 
           return (
             <div
-              className="bg-[rgba(0,0,0,0.8)] mb-1 w-8/12 p-2 m-auto text-black rounded-xl"
+              className="bg-[rgba(0,0,0,0.8)] mb-1 w-10/12 md:w-8/12 p-2 m-auto text-black rounded-xl"
               key={item._id}
             >
+
               <div className="flex flex-col bg-[rgba(255,255,255,0.8)] rounded-xl">
                 <div className="flex items-center space-x-4 px-4 pt-2 pb-1">
                   <img
@@ -162,13 +182,15 @@ function HomeFeed() {
                     alt="pfp"
                   />
                   <div className="font-medium text-left  w-10/12">
-                    <div className="flex items-center text-xl">
-                      {tempUser?.firstName} {tempUser?.lastName}
-                      <div className="text-gray-700 text-sm self-end ml-2">
-                        {dateFormatFunction(item?.createdAt)}
+                    <NavLink className='flex-col items-center gap-2 w-[57%]' to={`/profile/${item.username}`}>
+                      <div className="flex items-center text-xl">
+                        {tempUser?.firstName} {tempUser?.lastName}
+                        <div className="text-gray-700 text-sm self-end ml-2">
+                          {dateFormatFunction(item?.createdAt)}
+                        </div>
                       </div>
-                    </div>
-                    <div className="text-lg">@{tempUser?.username}</div>
+                      <div className="text-lg">@{tempUser?.username}</div>
+                    </NavLink>
                   </div>
                   {item.username === stateAuth.userDetails[0]?.username ? <div className='flex  items-start h-full text-2xl self-start'>
                     <button className='mx-2' onClick={() => handleEdit(item)}>
@@ -190,19 +212,19 @@ function HomeFeed() {
                 <hr className="w-11/12 h-[0.1rem] px-12 mx-auto my-1 bg-black border-0 rounded" />
                 <div className="flex px-8 py-1 mx-2 text-2xl justify-between">
                   <button className="text-2xl items-center flex py-1" onClick={() => handleLike(item)}>
-                    {item.likes.likedBy.find((items) => items.username === stateAuth.userDetails[0]?.username) ? (
-                      <AiFillDislike />
+                    {item.likes.likedBy.find((items) => items.username === stateAuth.userDetails[0].username) ? (
+                      <AiFillHeart className='text-[#FF073A]' />
                     ) : (
-                      <AiFillLike />
+                      <AiOutlineHeart className='text-[#FF073A]' />
                     )}
                     {item.likes.likeCount > 0 && (
                       <div className="text-base mx-2">{item.likes.likeCount}</div>
                     )}
                   </button>
-                  <button className="text-2xl items-center flex" onClick={()=>handleBookmark(item)}>
+                  <button className="text-2xl items-center flex" onClick={() => handleBookmark(item)}>
                     {stateUsers.bookmarks.find(items => items._id === item._id)
-                    ?<BsBookmarksFill />:<BsBookmark/>}
-                    
+                      ? <BsBookmarksFill /> : <BsBookmark />}
+
                   </button>
                 </div>
               </div>

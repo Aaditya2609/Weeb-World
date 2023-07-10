@@ -11,6 +11,9 @@ import RequiresAuth from './components/RequiresAuth';
 import ProfilePage from './pages/ProfilePage';
 import Bookmarks from './pages/Bookmarks';
 import Explore from './pages/Explore';
+import { useUsers } from './contexts/UserContext';
+import { useAuth } from './contexts/AuthContext';
+import { useEffect } from 'react';
 
 function App() {
   return (
