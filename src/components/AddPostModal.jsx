@@ -41,7 +41,7 @@ function AddPostModal({ setShowAddPost }) {
     return (
         <div>
             <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-70 z-100">
-                <div className="bg-white p-4 rounded-xl w-[35%] ">
+                <div className="bg-[rgba(255,255,255,0.8)] p-4 rounded-xl w-[35%] ">
                     <div className="flex justify-between items-center">
                     <h1 className="text-3xl self-start px-4 my-4 font-bold font-[manga] text-black">
                             New Post
@@ -59,7 +59,7 @@ function AddPostModal({ setShowAddPost }) {
                         <div className="w-11/12" >
                             <textarea
                                 rows="3"
-                                className="block p-2 w-full text-md text-gray-900 bg-white  border border-gray-300 rounded-xl"
+                                className="block p-2 w-full text-md text-gray-900  border border-black rounded-xl"
                                 placeholder="What's On Your Mind...."
                                 value={content.text}
                                 onChange={(e) => setContent({ ...content, text: e.target.value })}
@@ -81,12 +81,6 @@ function AddPostModal({ setShowAddPost }) {
                                     />
                                 </label>
                                 <span className="text-lg text-black">{fileName}</span>
-                                <button
-                                    type="button"
-                                    className="m-1 bg-[#FFF01F] hover:bg-[rgba(0,0,0,0.8)] hover:text-[#FFF01F]  text-[rgba(0,0,0,0.8)] font-bold my-4 py-2 px-6 text-2xl border rounded"
-                                >
-                                    <BsEmojiSmile />
-                                </button>
                             </div>
                             <button
                                 type="submit"

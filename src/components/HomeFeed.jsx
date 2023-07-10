@@ -16,6 +16,7 @@ import { RemoveBookmarkService } from '../services/Users/RemoveBookmark';
 import { filterPostsByFollowing } from '../utilities/filterPosts';
 import { NavLink } from 'react-router-dom';
 import { sortPosts } from '../utilities/trendingLatestFilters';
+import InputEmoji from 'react-input-emoji'
 
 function HomeFeed() {
 
@@ -128,12 +129,6 @@ function HomeFeed() {
                 />
               </label>
               <span className="text-lg text-white">{fileName}</span>
-              <button
-                type="button"
-                className="m-1 bg-[#FFF01F] hover:bg-[rgba(0,0,0,0.8)] hover:text-[#FFF01F]  text-[rgba(0,0,0,0.8)] font-bold my-4 py-2 px-6 text-2xl border rounded"
-              >
-                <BsEmojiSmile />
-              </button>
             </div>
             <button
               type="submit"

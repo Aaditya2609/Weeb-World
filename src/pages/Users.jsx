@@ -16,7 +16,7 @@ function Users() {
       };
   return (
     <div className='flex flex-col-reverse md:flex-row' style={divStyle}>
-    <Nav/>
+    <Nav />
     <ShowUsers/>
     </div>
   )

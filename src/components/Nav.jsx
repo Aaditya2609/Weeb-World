@@ -19,7 +19,7 @@ function Nav() {
   };
 
   return (
-    <div className="fixed md:relative w-[100vw] md:w-[25%] z-[100]">
+    <div className="fixed md:relative w-[100vw] md:w-[25%]  z-[100]">
       <div className="flex flex-row md:flex-col h-fit py-2 md:h-full items-center bg-black md:bg-[rgba(0,0,0,0.8)] text-white md:p-0 px-4">
         <div className="px-4 py-8 mb-4 items-center text-3xl font-[manga] text-[#FFF01F] hidden md:block">
           Weeb-World

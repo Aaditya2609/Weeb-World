@@ -43,7 +43,7 @@ function ShowUsers() {
   };
 
   return (
-    <div className="w-full flex flex-col h-[100vh] items-center ">
+    <div className="w-[90%] flex flex-col h-[100vh] mx-4 px-4 items-center ">
       <div className="bg-[rgba(0,0,0,0.8)] mb-1 w-10/12 md:w-10/12 p-2 text-white rounded-xl overflow-auto">
         <h1 className="font-bold text-3xl font-[manga] text-[#FFF01F] mt-2">
           Search Users
