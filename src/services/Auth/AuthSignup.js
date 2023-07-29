@@ -5,7 +5,6 @@ export const signupService=async( firstName,
     userName,
     email,
     password,dispatchAuth,dispatchUsers)=>{
-        console.log("dispatch users",dispatchUsers)
     try{
         const res =await axios({
             method: 'POST',
