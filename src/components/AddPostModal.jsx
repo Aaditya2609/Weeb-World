@@ -41,7 +41,7 @@ function AddPostModal({ setShowAddPost }) {
     return (
         <div>
             <div className="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-70 z-100">
-                <div className="bg-[rgba(255,255,255,0.8)] p-4 rounded-xl w-[35%] ">
+                <div className="bg-[rgba(255,255,255,0.8)] p-4 rounded-xl m:w-[35%] w-[80%] ">
                     <div className="flex justify-between items-center">
                     <h1 className="text-3xl self-start px-4 my-4 font-bold font-[manga] text-black">
                             New Post
