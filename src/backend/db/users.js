@@ -12,7 +12,7 @@ export const users = [
     lastName: "User",
     username: "test",
     password: "1234",
-    avatar:"https://avatarfiles.alphacoders.com/222/222762.jpg",
+    avatar:"https://wallpapers-clan.com/wp-content/uploads/2022/09/one-piece-pfp-4.jpg",
     createdAt: formatDate(),
     updatedAt: formatDate(),
     cover:"https://c4.wallpaperflare.com/wallpaper/291/819/697/illustration-city-anime-painting-wallpaper-preview.jpg"

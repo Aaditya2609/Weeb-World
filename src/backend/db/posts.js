@@ -28,7 +28,7 @@ export const posts = [
     content:
     {
       text: "Never trust anyone too much remember, the devil was once an angel",
-      imageURL: "https://scontent.fhyd14-2.fna.fbcdn.net/v/t31.18172-8/17814580_1371329772913637_7635302899111049904_o.jpg?_nc_cat=108&cb=99be929b-59f725be&ccb=1-7&_nc_sid=9267fe&_nc_ohc=WNOnDPL5xKUAX-egGY_&_nc_ht=scontent.fhyd14-2.fna&oh=00_AfCnzAfXImI_sLodlmQvsmoypp-ddvoZJ3Hj6hOTawQdnA&oe=64BCB90B"
+      imageURL: "https://images4.alphacoders.com/669/669542.jpg"
     },
     likes: {
       likeCount: 4,
