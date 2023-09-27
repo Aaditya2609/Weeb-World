@@ -91,7 +91,7 @@ function Feed() {
 
           return (
             <div
-              className="bg-[rgba(0,0,0,0.8)] my-4 w-10/12 md:8/12 p-2  m-auto text-black rounded-xl"
+              className="bg-[rgba(0,0,0,0.8)] my-4 w-10/12 md:w-8/12 p-2  m-auto text-black rounded-xl"
               key={item._id}
             >
               <div className="flex flex-col bg-[rgba(255,255,255,0.8)] rounded-xl">
