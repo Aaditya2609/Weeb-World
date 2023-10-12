@@ -1,8 +1,56 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Weeb-World
 
-## Available Scripts
+Weeb-World is a vibrant and immersive social media web application designed exclusively for anime enthusiasts. With its user-friendly interface, captivating design, and a wide range of functionalities, weeb-world provides the ultimate platform for fans to connect, share, and celebrate their passion for anime.
+
+
+## Demo
+
+
+
+
+## Features
+
+- Easy to use
+- Login
+- Login as Guest
+- Signup
+- Show all Posts of followed users
+- Follow and unfollow user
+- Explore post and sort by popular, latest
+- Add Bookmarks
+- Like and Unlike
+- Create new Posts
+- Edit and Delete Post
+- Visit Profile
+- Edit Profile
+- Search users and posts
+- Responsive
+
+## Components
+- 1.Login and Signup
+- 2.Feed
+- 3.Explore
+- 4.Bookmarks
+- 5.Profile
+- 6.Posts
+## Screenshots
+
+![App Screenshot](https://drive.google.com/uc?export=view&id=1BuomVLdiB7mPjeeXEdyRkmBWi_93S5N4)
+
+![App Screenshot](https://drive.google.com/uc?export=view&id=1Yf_sLuaijcEFqG_xDvTsFtMN0q7DKc9n)
+
+![App Screenshot](https://drive.google.com/uc?export=view&id=1Rx3n_PN1sr3Uvq4mkYZA97kOw-1sILZr)
+
+![App Screenshot](https://drive.google.com/uc?export=view&id=16B7zE6uvslYfECiTEdzWyMJ3xv_S-07y)
+
+![App Screenshot](https://drive.google.com/uc?export=view&id=1rmB8h9hPHNc87DUhwmSS_u0s6MIvmgBZ)
+
+
+
+## Live Link
+https://weeb-world.netlify.app
+## Deployment
 
 In the project directory, you can run:
 
@@ -27,44 +75,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
