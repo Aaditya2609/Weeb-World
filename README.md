@@ -6,8 +6,7 @@ Weeb-World is a vibrant and immersive social media web application designed excl
 
 ## Demo
 
-
-
+https://github.com/Aaditya2609/Weeb-World/assets/108318278/a7920a92-9d36-4095-9218-1df724beb83b
 
 ## Features
 
@@ -34,22 +33,23 @@ Weeb-World is a vibrant and immersive social media web application designed excl
 - 4.Bookmarks
 - 5.Profile
 - 6.Posts
+  
 ## Screenshots
+![Landing Page](https://github.com/Aaditya2609/Weeb-World/assets/108318278/b7f884e8-3b24-4935-bf83-5209efd7f8e5)
 
-![App Screenshot](https://drive.google.com/uc?export=view&id=1BuomVLdiB7mPjeeXEdyRkmBWi_93S5N4)
+![signup](https://github.com/Aaditya2609/Weeb-World/assets/108318278/7e3e09d6-5a02-43b3-92b7-0fe4d93ce4e4)
 
-![App Screenshot](https://drive.google.com/uc?export=view&id=1Yf_sLuaijcEFqG_xDvTsFtMN0q7DKc9n)
+![login](https://github.com/Aaditya2609/Weeb-World/assets/108318278/b4bb2faf-a5c6-4d36-a67b-34db768086b8)
 
-![App Screenshot](https://drive.google.com/uc?export=view&id=1Rx3n_PN1sr3Uvq4mkYZA97kOw-1sILZr)
+![Feed](https://github.com/Aaditya2609/Weeb-World/assets/108318278/993d7b5e-bfb0-495a-a50b-096c005f5074)
 
-![App Screenshot](https://drive.google.com/uc?export=view&id=16B7zE6uvslYfECiTEdzWyMJ3xv_S-07y)
+![profile](https://github.com/Aaditya2609/Weeb-World/assets/108318278/afe7d943-920e-4477-92e1-603cd153b226)
 
-![App Screenshot](https://drive.google.com/uc?export=view&id=1rmB8h9hPHNc87DUhwmSS_u0s6MIvmgBZ)
-
-
+![Edit Profile](https://github.com/Aaditya2609/Weeb-World/assets/108318278/c8b4df14-6cc5-4a11-9558-7269f437dcce)
 
 ## Live Link
-https://weeb-world.netlify.app
+Weeb-World(https://weeb-world.netlify.app)
+
 ## Deployment
 
 In the project directory, you can run:
